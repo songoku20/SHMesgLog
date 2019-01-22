@@ -1,0 +1,6 @@
+framework module Pods_SHMesgLog_Tests {
+  umbrella header "Pods-SHMesgLog_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

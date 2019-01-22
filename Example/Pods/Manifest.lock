@@ -1,0 +1,16 @@
+PODS:
+  - SHMesgLog (0.1.0)
+
+DEPENDENCIES:
+  - SHMesgLog (from `../`)
+
+EXTERNAL SOURCES:
+  SHMesgLog:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SHMesgLog: 47e242adf15acc97693fa91824495e3a9548918b
+
+PODFILE CHECKSUM: 335107b4073a5e6d882d121373f716b7f3d9b8be
+
+COCOAPODS: 1.6.0.beta.2

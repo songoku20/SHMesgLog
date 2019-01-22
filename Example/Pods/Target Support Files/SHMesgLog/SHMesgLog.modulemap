@@ -1,0 +1,6 @@
+framework module SHMesgLog {
+  umbrella header "SHMesgLog-umbrella.h"
+
+  export *
+  module * { export * }
+}
