@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SHMesgLog_Tests' do
+  pod 'SHMesgLog', :path => '../'
+  
+  
+end
