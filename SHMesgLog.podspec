@@ -5,11 +5,10 @@
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
-
 Pod::Spec.new do |s|
   s.name             = 'SHMesgLog'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SHMesgLog.'
+  s.version          = '0.1.5'
+  s.summary          = 'Everything about this project under our ownership'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,26 +16,27 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = "Everything about this project under our ownership in SHMesgLog-iOS"
 
-  s.homepage         = 'https://github.com/linhct.dev@gmail.com/SHMesgLog'
+  s.homepage         = 'https://github.com/songoku20/SHMesgLog'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'linhct.dev@gmail.com' => 'sonleminh@vccorp.vn' }
-  s.source           = { :git => 'https://github.com/linhct.dev@gmail.com/SHMesgLog.git', :tag => s.version.to_s }
+  s.author           = { 'songoku20' => 'sonleminh@vccorp.vn' }
+  s.source           = { :http => "https://github.com/songoku20/SHMesgLog/releases/download/0.1.5/SHMesgLog-v0.1.5.zip" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  # s.ios.deployment_target = '8.0'
 
   s.source_files = 'SHMesgLog/Classes/**/*'
+  s.frameworks          = ["SystemConfiguration", "QuartzCore"]
+  s.library             = "z", "System", "xml2", "xml2.2", "c++"
+  s.requires_arc        = true
   
-  # s.resource_bundles = {
-  #   'SHMesgLog' => ['SHMesgLog/Assets/*.png']
-  # }
+  s.platform            = :ios, '8.0'
+  s.preserve_paths      = 'SHMesgLog.framework'
+  s.public_header_files = 'SHMesgLog.framework/Versions/A/Headers/SHMesgLog.h'
+  s.source_files        = 'SHMesgLog.framework/Versions/A/Headers/SHMesgLog.h'
+  s.dependency          'CTLTrackingAds-SDK'
+  s.vendored_frameworks = 'SHMesgLog.framework'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
