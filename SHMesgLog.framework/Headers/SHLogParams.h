@@ -10,18 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, COVType){
+typedef enum {
     viewType = 0,
     clickType = 1,
     scrollType = 2
-};
+} COVType;
 
-typedef NS_ENUM(NSInteger, LOGType){
+typedef enum{
     noneLog = 0,
     pageviewLog = 1,
     revLog = 2,
     boxviewLog = 3
-};
+} LOGType;
 
 @interface SHLogParams : NSObject
 

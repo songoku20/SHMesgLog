@@ -7,30 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AdSupport/AdSupport.h>
 #import "SHLogParams.h"
 
 @interface SHMesgLog : NSObject
 
-+ (id _Nonnull) shareInstance;
-// Get version of SDK
--(NSString * _Nonnull) getVersion;
-// Get device unique id
--(NSString * _Nonnull) getDeviceID;
-// Tracking view with params
--(BOOL) sendLogTrackingView:(SHLogParams * _Nullable)params;
-// Tracking click banner
--(void) sendLogClickBanner:(NSString * _Nonnull)app_id org:(NSString* _Nonnull)org cov:(NSInteger)cov;
-// Send log confirm with extension
--(void) sendLogConfirm:(NSString * _Nullable)confirmExt;
-// Set extension
--(void) setExt:(NSString* _Nullable)ext;
-// Call when UIApplicationDidEnterBackgroundNotification
+-(void) sendLogClickBanner:(NSString *)app_id org:(NSString*)org cov:(NSInteger)cov;
+-(void) setExt:(NSString*)ext;
+-(NSString *) getVersion;
+-(NSString *) getDeviceID; // Hoant version 2.6
+-(void) sendLogConfirm:(NSString *)confirmExt; // Hoant version 2.6.5
+
+-(BOOL) sendLogTrackingView:(SHLogParams *)params;
+
++ (id) shareInstance;
+
+//For handle app
+// call when UIApplicationDidEnterBackgroundNotification
 -(void)handleAppQuit;
-// Call when UIApplicationDidBecomeActiveNotification
+//call when UIApplicationDidBecomeActiveNotification
 -(void)handleAppOpen;
-// Call when UIApplicationWillEnterForegroundNotification
+//call when UIApplicationWillEnterForegroundNotification
 -(void)handleAppEnterForeground;
-// Call when UIApplicationWillTerminateNotification
+//call when UIApplicationWillTerminateNotification
 -(void)handleAppWillTerminate;
 
 @end
