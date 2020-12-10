@@ -1,9 +1,9 @@
 //
-//  MesgLog.h
-//  MesgLog
+//  SHMesgLog.h
+//  SHMesgLog
 //
-//  Created by Hoant on 2/4/16.
-//  Copyright (c) 2016 Hoant. All rights reserved.
+//  Created by SUUNC on 10/10/20.
+//  Copyright (c) 2020 SUUNC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,25 +11,38 @@
 #import "SHLogParams.h"
 
 @interface SHMesgLog : NSObject
+// Instance
++ (id)shareInstance;
 
--(void) sendLogClickBanner:(NSString *)app_id org:(NSString*)org cov:(NSInteger)cov;
--(void) setExt:(NSString*)ext;
--(NSString *) getVersion;
--(NSString *) getDeviceID; // Hoant version 2.6
--(void) sendLogConfirm:(NSString *)confirmExt; // Hoant version 2.6.5
+// Library version
+- (NSString *)getVersion;
 
--(BOOL) sendLogTrackingView:(SHLogParams *)params;
+// Device identifier
+- (NSString *)getDeviceID;
 
-+ (id) shareInstance;
+// Set extend value
+- (void)setExt:(NSString *)ext;
 
-//For handle app
-// call when UIApplicationDidEnterBackgroundNotification
--(void)handleAppQuit;
-//call when UIApplicationDidBecomeActiveNotification
--(void)handleAppOpen;
-//call when UIApplicationWillEnterForegroundNotification
--(void)handleAppEnterForeground;
-//call when UIApplicationWillTerminateNotification
--(void)handleAppWillTerminate;
+// Send log confirmation
+- (void)sendLogConfirm:(NSString *)confirmExt;
+
+// Send log click banner
+- (void)sendLogClickBanner:(NSString *)app_id org:(NSString *)org cov:(NSInteger)cov;
+
+// Send log tracking view
+- (BOOL)sendLogTrackingView:(SHLogParams *)params;
+
+//For handle app=
+// Call when UIApplicationDidBecomeActiveNotification
+- (void)handleAppOpen;
+
+// Call when UIApplicationDidEnterBackgroundNotification
+- (void)handleAppQuit;
+
+// Call when UIApplicationWillEnterForegroundNotification
+- (void)handleAppEnterForeground;
+
+// Call when UIApplicationWillTerminateNotification
+- (void)handleAppWillTerminate;
 
 @end
