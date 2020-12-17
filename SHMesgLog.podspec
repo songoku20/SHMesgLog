@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'SHMesgLog'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = 'Everything about this project under our ownership'
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'songoku20' => 'sonleminh@vccorp.vn' }
-  s.source           = { :http => "https://github.com/songoku20/SHMesgLog/releases/download/0.2.4/SHMesgLog-0.2.4.zip" }
+  s.source           = { :http => "https://github.com/songoku20/SHMesgLog/releases/download/0.2.5/SHMesgLog-0.2.5.zip" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   # s.ios.deployment_target = '8.0'
